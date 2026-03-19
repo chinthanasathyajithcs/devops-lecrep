@@ -1,0 +1,6 @@
+from app import app
+def test_home():
+    client = app.test_client()
+    response =client.get('/')
+    assert response.status_code == 2-00
+    assert b"hello, Devops world! V1" in response.data  
